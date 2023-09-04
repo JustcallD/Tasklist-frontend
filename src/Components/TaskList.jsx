@@ -8,6 +8,7 @@ import DeleteTaskModal from "./Functions/DeleteTaskModal";
 // Import the CSS module file
 import styles from "./TaskList.module.css";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar/AuthNavbar/Navbar";
 
 const TaskList = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ const TaskList = () => {
 
   return (
     <>
+      <Navbar />
       {popup && <EditTaskModal id={id} popup={popup} setPopup={setPopup} />}
       {deletePopup && (
         <DeleteTaskModal
@@ -44,7 +46,6 @@ const TaskList = () => {
       <Link to={"/signup"}>
         <button className={styles.addButton}>signup</button>
       </Link>
-
 
       <div className={styles.taskList}>
         {task &&

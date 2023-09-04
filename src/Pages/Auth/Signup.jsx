@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Signup.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../../Components/Navbar/AuthNavbar/Navbar";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -38,6 +39,7 @@ const Signup = () => {
   };
   return (
     <div className={styles.container}>
+      <Navbar />
       <div className={styles.subContainer}>
         <div className={styles.detailsSection}>
           <div className={styles.company}>

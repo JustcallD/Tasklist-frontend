@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./LandingPage.module.css";
-// import Navbar from "../../Components/Navbar/AuthNavbar/Navbar";
-import { FaTasks, FaUsers, FaChartBar } from "react-icons/fa"; // Import icons
+import Navbar from "../../Components/Navbar/AuthNavbar/Navbar";
+import { FaTasks, FaUsers, FaChartBar } from "react-icons/fa"; 
 
 const LandingPage = () => {
   return (
     <div className={styles.container}>
-      {/* <Navbar /> */}
+      <Navbar />
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <h1 className={styles.title}>Task Management Reimagined</h1>
