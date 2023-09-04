@@ -38,6 +38,13 @@ const TaskList = () => {
       <Link to={"/addTask"}>
         <button className={styles.addButton}>Add Task</button>
       </Link>
+      <Link to={"/login"}>
+        <button className={styles.addButton}>login</button>
+      </Link>
+      <Link to={"/signup"}>
+        <button className={styles.addButton}>signup</button>
+      </Link>
+
 
       <div className={styles.taskList}>
         {task &&
