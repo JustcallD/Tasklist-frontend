@@ -1,0 +1,91 @@
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.3rem 1rem;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.navMenu {
+    display: none;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    margin: 0 1rem;
+    color: #fff;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.navLink {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0.5rem;
+}
+
+.navLink:hover {
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.grayBackground {
+    background-color: gray;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .Container {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .navMenu {
+        display: flex;
+        color: rgb(45, 45, 45);
+    }
+
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        gap: 1.5rem;
+    }
+
+    .navLink {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navMenu {
+        display: flex;
+    }
+
+    .open {
+        display: flex;
+    }
+
+
+}

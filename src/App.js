@@ -7,14 +7,18 @@ import DeleteTaskModal from "./Components/Functions/DeleteTaskModal";
 import EditTaskModal from "./Components/Functions/EditTaskModal";
 import Signup from "./Pages/Auth/Signup";
 import Login from "./Pages/Auth/Login";
+import LandingPage from "./Pages/Home/LandingPage";
+import Navbar from "./Components/Navbar/AuthNavbar/Navbar";
 // import Home from "./Pages/About/Home";
 
 const App = () => {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/addTask" element={<AddTask />} />
-        <Route path="/" element={<TaskList />} />
+        <Route path="/tasks" element={<TaskList />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/delete" element={<DeleteTaskModal />} />
         <Route path="/update/:id" element={<EditTaskModal />} />
         <Route path="/signup" element={<Signup />} />

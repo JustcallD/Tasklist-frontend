@@ -1,0 +1,144 @@
+/* LandingPage.module.css */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Set a background color or background image for the header */
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../../Assets/Img/bg-img.jpg');
+    /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    height: 68.7vh;
+
+}
+
+.headerContent {
+    max-width: 800px;
+    height: 40%;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.ctaButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.ctaButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.featureSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+
+.feature {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
+    height: 100%;
+}
+
+.icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.featureTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.featureDescription {
+    font-size: 1rem;
+    color: #555;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 60px 0;
+    }
+
+    .headerContent {
+        height: auto;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .ctaButton {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .featureSection {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .feature {
+        margin-bottom: 2rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .featureTitle {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .featureDescription {
+        font-size: 0.9rem;
+    }
+}
