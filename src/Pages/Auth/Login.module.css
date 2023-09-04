@@ -1,0 +1,291 @@
+/* Login.module.css */
+
+/* .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #f0f0f0;
+  
+}
+
+.subContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.detailsSection {
+    flex: 1;
+  
+    padding: 20px;
+  
+    text-align: center;
+}
+
+.detailsSection h1 {
+    font-size: 24px;
+ 
+    color: #333;
+
+}
+
+.detailsSection div {
+    margin-bottom: 15px;
+
+    font-size: 18px;
+
+}
+
+.loginForm {
+    flex: 0.7;
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+button {
+    background-color: #007bff;
+
+    color: #fff;
+   
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+    background-color: #0056b3;
+
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+form button[type="submit"] {
+    background-color: #4caf50;
+
+    color: #fff;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049;
+
+}
+
+.company {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.moto {
+    font-style: italic;
+    color: #777;
+}
+
+
+.loginFormTitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.loginFormLable {
+    font-weight: bold;
+    color: #333;
+}
+
+.loginFormInput {
+    border: 2px solid #007bff;
+    padding: 12px;
+}
+
+.loginFormbtn {
+    margin-top: 20px;
+}
+
+
+.loginForm button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.loginForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}  */
+
+
+
+/* Login.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.subContainer {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.detailsSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.company {
+    font-size: 32px;
+    /* Increase font size for "Company Name" */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.moto {
+    font-size: 18px;
+    text-align: center;
+    /* Center-align the text */
+    margin-bottom: 20px;
+}
+
+/* Add animation to the Join Us button */
+.detailsSectionbtn {
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.detailsSectionbtn:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+.loginForm {
+    flex: 1;
+    padding: 2rem;
+}
+
+.loginFormTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.loginFormInput {
+    margin-bottom: 20px;
+}
+
+.loginFormLable {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.loginFormInput input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Add animation to the Submit button */
+.loginFormbtn button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.loginFormbtn button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .subContainer {
+      flex-direction: column; /* Stack sections on top of each other */
+      max-width: 100%; /* Take full width of the screen */
+    }
+  
+    .detailsSection,
+    .signupForm {
+      flex: 1;
+      padding: 1rem; /* Reduce padding for smaller screens */
+      text-align: center; /* Center-align the content */
+    }
+  
+    .companyName {
+      font-size: 24px; /* Reduce font size for company name */
+    }
+  
+    .companyDescription {
+      font-size: 14px; /* Reduce font size for company description */
+      margin-bottom: 10px; /* Reduce margin for spacing */
+    }
+  
+    /* Adjust button styles for smaller screens */
+    .detailsSectionBtn,
+    .loginBtn {
+      font-size: 14px;
+      padding: 8px 16px;
+      margin-top: 10px;
+    }
+  
+    /* Reduce font size for form labels and inputs */
+    .formLabel,
+    .formField {
+      font-size: 14px;
+    }
+  }

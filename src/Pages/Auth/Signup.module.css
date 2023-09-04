@@ -1,0 +1,172 @@
+/* Signup.module.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.subContainer {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.detailsSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #007bff;
+  color: #ffffff;
+  text-align: center;
+  /* Center-align the text */
+}
+
+.loginLink {
+  color: #007bff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.loginLink:hover {
+  text-decoration: none;
+}
+
+.loginBtn {
+  background-color: #ff5722;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.loginBtn:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+.companyName {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.companyDescription {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.detailsSectionBtn {
+  background-color: #ff5722;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.detailsSectionBtn:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+.signupForm {
+  flex: 1;
+  padding: 2rem;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.formInput {
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.formField {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+.formBtn button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.formBtn button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .subContainer {
+    flex-direction: column; /* Stack sections on top of each other */
+    max-width: 100%; /* Take full width of the screen */
+  }
+
+  .detailsSection,
+  .signupForm {
+    flex: 1;
+    padding: 1rem; /* Reduce padding for smaller screens */
+    text-align: center; /* Center-align the content */
+  }
+
+  .companyName {
+    font-size: 24px; /* Reduce font size for company name */
+  }
+
+  .companyDescription {
+    font-size: 14px; /* Reduce font size for company description */
+    margin-bottom: 10px; /* Reduce margin for spacing */
+  }
+
+  /* Adjust button styles for smaller screens */
+  .detailsSectionBtn,
+  .loginBtn {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+
+  /* Reduce font size for form labels and inputs */
+  .formLabel,
+  .formField {
+    font-size: 14px;
+  }
+}
