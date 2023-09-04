@@ -3,10 +3,13 @@ import axios from "axios";
 
 export const createTask = createAsyncThunk("create task", async (data) => {
   const { title, description } = data;
-  const response = await axios.post("https://api-mste.onrender.com/api/tasks", {
-    title,
-    description,
-  });
+  const response = await axios.post(
+    "https://task-backend-zv5e.onrender.com/v1/task",
+    {
+      title,
+      description,
+    }
+  );
 
   try {
     const result = await response;
@@ -18,7 +21,9 @@ export const createTask = createAsyncThunk("create task", async (data) => {
 });
 
 export const taskList = createAsyncThunk("task list", async () => {
-  const response = await axios.get("https://api-mste.onrender.com/api/tasks");
+  const response = await axios.get(
+    "https://task-backend-zv5e.onrender.com/v1/task"
+  );
   try {
     const result = await response;
     console.log(result.data);
@@ -29,7 +34,9 @@ export const taskList = createAsyncThunk("task list", async () => {
 });
 
 export const deleteTask = createAsyncThunk("delete", async (_id) => {
-  const response = await axios.delete(`https://api-mste.onrender.com/api/tasks/${_id}`);
+  const response = await axios.delete(
+    `https://api-mste.onrender.com/api/tasks/${_id}`
+  );
   try {
     const result = await response;
     console.log(result.data);

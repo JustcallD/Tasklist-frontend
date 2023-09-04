@@ -21,7 +21,7 @@ const Signup = () => {
         return;
       }
       const response = await axios.post(
-        "http://localhost:4000/v1/auth/register",
+        "https://task-backend-zv5e.onrender.com/v1/auth/register",
         {
           username,
           email,
