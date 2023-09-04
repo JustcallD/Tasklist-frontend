@@ -8,6 +8,14 @@ export const createTask = createAsyncThunk("create task", async (data) => {
     {
       title,
       description,
+    },
+    {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        // Add any other headers you may need
+      },
     }
   );
 
@@ -22,7 +30,15 @@ export const createTask = createAsyncThunk("create task", async (data) => {
 
 export const taskList = createAsyncThunk("task list", async () => {
   const response = await axios.get(
-    "https://task-backend-zv5e.onrender.com/v1/task"
+    "https://task-backend-zv5e.onrender.com/v1/task",
+    {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        // Add any other headers you may need
+      },
+    }
   );
   try {
     const result = await response;
