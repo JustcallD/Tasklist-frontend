@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { taskList } from "../Store/Slices/TaskSlice";
-import Card from "./Card";
+
 import EditTaskModal from "./Functions/EditTaskModal";
 import DeleteTaskModal from "./Functions/DeleteTaskModal";
 
@@ -9,6 +9,9 @@ import DeleteTaskModal from "./Functions/DeleteTaskModal";
 import styles from "./TaskList.module.css";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar/AuthNavbar/Navbar";
+
+import TaskCardGpt from "./Cards/NotesCard/CardGpt";
+import { Desktop } from "./Cards/desktop/Desktop";
 
 const TaskList = () => {
   const dispatch = useDispatch();
@@ -21,13 +24,25 @@ const TaskList = () => {
     dispatch(taskList());
   }, [dispatch]);
 
-  if (isLoading) {
-    return <h2>Loading...</h2>;
-  }
-
+  // if (isLoading) {
+  //   return <h2>Loading...</h2>;
+  // }
+  const taskData = [
+    {
+      id: 1,
+      title: "Task 1",
+      description: "Description for Task 1",
+      status: "Complete",
+      createdDate: "2023-09-04",
+      updatedDate: "2023-09-05",
+      assignedTo: "John Doe",
+    },
+    // Add more task objects as needed
+  ];
   return (
     <>
       <Navbar />
+
       {popup && <EditTaskModal id={id} popup={popup} setPopup={setPopup} />}
       {deletePopup && (
         <DeleteTaskModal
@@ -48,7 +63,7 @@ const TaskList = () => {
       </Link>
 
       <div className={styles.taskList}>
-        {task &&
+        {/* {task &&
           task.map((data, i) => (
             <Card
               key={i}
@@ -58,8 +73,23 @@ const TaskList = () => {
               onUpdate={() => [setId(data._id), setPopup(true)]}
               onDelete={() => [setId(data._id), setDeletePopup(true)]}
             />
-          ))}
+          ))} */}
       </div>
+      <div className={styles.taskList}>
+        {taskData.map((task) => (
+          <TaskCardGpt
+            key={task.id}
+            title={task.title}
+            description={task.description}
+            status={task.status}
+            createdDate={task.createdDate}
+            updatedDate={task.updatedDate}
+            assignedTo={task.assignedTo}
+            // onDelete={() => handleDeleteTask(task.id)}
+          />
+        ))}
+      </div>
+      <Desktop />
     </>
   );
 };

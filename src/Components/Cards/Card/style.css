@@ -1,0 +1,217 @@
+.group {
+    height: 500px;
+    width: 620px;
+  }
+  
+  .group .card-with-popup {
+    height: 500px;
+    width: 624px;
+  }
+  
+  .group .overlap {
+    background: linear-gradient(180deg, rgb(238, 251, 251) 0%, rgba(238, 251, 251, 0) 100%);
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px #00000040;
+    height: 500px;
+    position: relative;
+    width: 620px;
+  }
+  
+  .group .button-to-open-popup {
+    height: 25px;
+    left: 525px;
+    position: absolute;
+    top: 36px;
+    width: 45px;
+  }
+  
+  .group .text-wrapper {
+    color: #000000;
+    font-family: "Bahnschrift-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 396px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 368px;
+    width: 206px;
+  }
+  
+  .group .div {
+    color: #000000;
+    font-family: "Bahnschrift-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 396px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 400px;
+    width: 206px;
+  }
+  
+  .group .overlap-group {
+    height: 274px;
+    left: 50px;
+    position: absolute;
+    top: 72px;
+    width: 539px;
+  }
+  
+  .group .descrption {
+    height: 264px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 522px;
+  }
+  
+  .group .div-wrapper {
+    background: linear-gradient(180deg, rgba(77, 168, 218, 0.24) 0%, rgba(77, 168, 218, 0) 100%);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px #00000040;
+    height: 264px;
+    position: relative;
+    width: 520px;
+  }
+  
+  .group .p {
+    color: #3f3f3f;
+    font-family: "Bahnschrift-Light", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    left: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: justify;
+    top: 14px;
+    width: 491px;
+  }
+  
+  .group .popup-for-delete-and {
+    background: linear-gradient(180deg, rgb(142.38, 232.24, 255) 0%, rgb(212.51, 246.41, 255) 100%);
+    border-radius: 15px;
+    height: 100px;
+    left: 359px;
+    position: absolute;
+    top: 0;
+    width: 180px;
+  }
+  
+  .group .delete-sweep {
+    height: 50px;
+    left: 105px;
+    position: absolute;
+    top: 19px;
+    width: 50px;
+  }
+  
+  .group .edit-square {
+    height: 40px;
+    left: 32px;
+    position: absolute;
+    top: 24px;
+    width: 40px;
+  }
+  
+  .group .status {
+    height: 69px;
+    left: 50px;
+    position: absolute;
+    top: 381px;
+    width: 234px;
+  }
+  
+  .group .overlap-2 {
+    background-color: #e8f9fd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px #00000040;
+    height: 69px;
+    position: relative;
+    width: 232px;
+  }
+  
+  .group .status-completed {
+    color: #000000;
+    font-family: "Candara-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 13px;
+    width: 193px;
+  }
+  
+  .group .rectangle {
+    background-color: #f39c12;
+    border-radius: 10px;
+    height: 17px;
+    left: 119px;
+    position: absolute;
+    top: 35px;
+    width: 88px;
+  }
+  
+  .group .title {
+    height: 48px;
+    left: 50px;
+    position: absolute;
+    top: 24px;
+    width: 229px;
+  }
+  
+  .group .overlap-3 {
+    background: linear-gradient(180deg, rgb(118, 193, 212) 0%, rgba(118, 193, 212, 0) 100%);
+    border-radius: 10px;
+    height: 48px;
+    position: relative;
+    width: 227px;
+  }
+  
+  .group .text-wrapper-2 {
+    color: #ffffffc4;
+    font-family: "Candara-Bold", Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    left: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 4px;
+    white-space: nowrap;
+    width: 187px;
+  }
+  
+  .group .assign-user-username {
+    height: 40px;
+    left: 320px;
+    position: absolute;
+    top: 432px;
+    width: 252px;
+  }
+  
+  .group .overlap-4 {
+    background: linear-gradient(180deg, rgb(118, 193, 212) 0%, rgba(118, 193, 212, 0) 100%);
+    border-radius: 10px;
+    height: 40px;
+    position: relative;
+    width: 250px;
+  }
+  
+  .group .text-wrapper-3 {
+    color: #fafeff;
+    font-family: "Bahnschrift-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+    width: 193px;
+  }
+  

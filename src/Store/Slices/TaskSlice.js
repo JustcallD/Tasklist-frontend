@@ -36,7 +36,6 @@ export const taskList = createAsyncThunk("task list", async () => {
         Accept: "application/json",
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        // Add any other headers you may need
       },
     }
   );
@@ -85,48 +84,50 @@ const initialState = {
 const taskDetails = createSlice({
   name: "task",
   initialState,
-  extraReducers: {
-    [createTask.pending]: (state) => {
+  extraReducers: (builder) => {
+    builder.addCase(createTask.pending, (state) => {
       state.isLoading = true;
-    },
-    [createTask.fulfilled]: (state, action) => {
+    });
+    builder.addCase(createTask.fulfilled, (state, action) => {
       state.isLoading = false;
       state.task.push(action.payload);
-    },
-    [createTask.rejected]: (state, action) => {
+    });
+    builder.addCase(createTask.rejected, (state) => {
       state.isLoading = false;
       state.error = true;
-    },
-    [taskList.pending]: (state) => {
+    });
+
+    builder.addCase(taskList.pending, (state) => {
       state.isLoading = true;
-    },
-    [taskList.fulfilled]: (state, action) => {
+    });
+    builder.addCase(taskList.fulfilled, (state, action) => {
       state.isLoading = false;
       state.task = action.payload;
-    },
-    [taskList.rejected]: (state, action) => {
+    });
+    builder.addCase(taskList.rejected, (state) => {
       state.isLoading = false;
       state.error = true;
-    },
-    [deleteTask.pending]: (state) => {
+    });
+
+    builder.addCase(deleteTask.pending, (state) => {
       state.isLoading = true;
-    },
-    [deleteTask.fulfilled]: (state, action) => {
+    });
+    builder.addCase(deleteTask.fulfilled, (state, action) => {
       state.isLoading = false;
       const { id } = action.payload;
       if (id) {
         state.task = state.task.filter((data) => data.id !== id);
       }
-    },
-    [deleteTask.rejected]: (state, action) => {
+    });
+    builder.addCase(deleteTask.rejected, (state) => {
       state.isLoading = false;
       state.error = true;
-    },
-    [updateTask.pending]: (state) => {
-      state.isLoading = true;
-    },
+    });
 
-    [updateTask.fulfilled]: (state, action) => {
+    builder.addCase(updateTask.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(updateTask.fulfilled, (state, action) => {
       state.isLoading = false;
 
       const updatedIndex = state.task.findIndex(
@@ -135,12 +136,11 @@ const taskDetails = createSlice({
       if (updatedIndex !== -1) {
         state.task[updatedIndex] = action.payload;
       }
-    },
-
-    [updateTask.rejected]: (state, action) => {
+    });
+    builder.addCase(updateTask.rejected, (state) => {
       state.isLoading = false;
       state.error = true;
-    },
+    });
   },
 });
 
