@@ -10,15 +10,16 @@ import styles from "./TaskList.module.css";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar/AuthNavbar/Navbar";
 
-import TaskCardGpt from "./Cards/NotesCard/CardGpt";
-import { Desktop } from "./Cards/desktop/Desktop";
+// import Card from "./Cards/Card";
+import TaskCard from "./Cards/Taskcard/Card";
 
 const TaskList = () => {
   const dispatch = useDispatch();
-  const { task, isLoading } = useSelector((state) => state.task);
+  const { task } = useSelector((state) => state.task);
   const [id, setId] = useState();
   const [popup, setPopup] = useState(false);
   const [deletePopup, setDeletePopup] = useState(false);
+  console.log("tasks", task);
 
   useEffect(() => {
     dispatch(taskList());
@@ -27,18 +28,7 @@ const TaskList = () => {
   // if (isLoading) {
   //   return <h2>Loading...</h2>;
   // }
-  const taskData = [
-    {
-      id: 1,
-      title: "Task 1",
-      description: "Description for Task 1",
-      status: "Complete",
-      createdDate: "2023-09-04",
-      updatedDate: "2023-09-05",
-      assignedTo: "John Doe",
-    },
-    // Add more task objects as needed
-  ];
+
   return (
     <>
       <Navbar />
@@ -62,8 +52,8 @@ const TaskList = () => {
         <button className={styles.addButton}>signup</button>
       </Link>
 
-      <div className={styles.taskList}>
-        {/* {task &&
+      {/* <div className={styles.taskList}>
+        {task &&
           task.map((data, i) => (
             <Card
               key={i}
@@ -73,23 +63,22 @@ const TaskList = () => {
               onUpdate={() => [setId(data._id), setPopup(true)]}
               onDelete={() => [setId(data._id), setDeletePopup(true)]}
             />
-          ))} */}
-      </div>
+          ))}
+      </div> */}
       <div className={styles.taskList}>
-        {taskData.map((task) => (
-          <TaskCardGpt
-            key={task.id}
-            title={task.title}
-            description={task.description}
-            status={task.status}
-            createdDate={task.createdDate}
-            updatedDate={task.updatedDate}
-            assignedTo={task.assignedTo}
-            // onDelete={() => handleDeleteTask(task.id)}
-          />
-        ))}
+        {task &&
+          task.map((data, i) => (
+            <TaskCard
+              key={i}
+              title={data.title}
+              description={data.description}
+              status={data.status}
+              assignedTo={data.assignedTo.username}
+              onUpdate={() => [setId(data._id), setPopup(true)]}
+              onDelete={() => [setId(data._id), setDeletePopup(true)]}
+            />
+          ))}
       </div>
-      <Desktop />
     </>
   );
 };
